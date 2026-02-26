@@ -27,11 +27,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1772031046,
-        "narHash": "sha256-M1pcSHV9KSMjnHUXH4oGGZnLycZ17g/Q2MCoqRWeA7I=",
+        "lastModified": 1772144141,
+        "narHash": "sha256-YZblb9N58JbAwsv8Uc75LBvw2JKs8Pb9qC4Eu42i5Kw=",
         "owner": "papercomputeco",
         "repo": "flake-skills",
-        "rev": "c997fd9a0a98a685f7249cbcb7828ca3999d06e1",
+        "rev": "4085b2b7289e7789c549a2bd4f86a83517ddc662",
         "type": "github"
       },
       "original": {
