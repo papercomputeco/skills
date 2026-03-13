@@ -36,3 +36,4 @@ Enter the dev shell `nix develop` for skills to automatically propagate.
 | Skill | Description |
 |--------|-------------|
 | [`dagger-check`](./skills/dagger-check) | Tell the agent how to run `dagger check` |
+| [`tapes`](./skills/tapes) | Search and query past agent sessions from local tapes SQLite store |
