@@ -40,24 +40,9 @@ tapes search "<query>" --api-target http://localhost:8081 --top 5
 - Adjust `--top` based on how broad or narrow the user's question is
 - Use `--quiet` when piping results to other commands like `tapes skill generate`
 
-## Deck (session overview)
-
-To show session summaries and costs:
-
-```
-tapes deck --sqlite ~/.tapes/tapes.db --since 24h
-```
-
-Useful flags:
-- `--since 24h` / `--since 7d` for time windows
-- `--sort cost|time|tokens|duration`
-- `--model <name>` to filter by model
-- `--project <name>` to filter by project
-- `--session <id>` to drill into a specific session
-
 ## Workflow
 
 1. Check if the API is already listening on port 8081
 2. If not, start `tapes serve api --sqlite ~/.tapes/tapes.db` in the background
-3. Run the search or deck command the user asked for
+3. Run the search command the user asked for
 4. Present results concisely
