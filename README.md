@@ -30,10 +30,17 @@ Use them in your project's flake with [`flake-skills`](https://github.com/paperc
 
 Enter the dev shell `nix develop` for skills to automatically propagate.
 
+Or install directly with the [skills CLI](https://skills.sh):
+
+```bash
+npx skills add papercomputeco/skills
+```
+
 ---
 
 
 | Skill | Description |
 |--------|-------------|
+| [`confluent-cloud-setup`](./skills/confluent-cloud-setup) | Set up Confluent Cloud clusters, topics, and API keys for any project |
 | [`dagger-check`](./skills/dagger-check) | Tell the agent how to run `dagger check` |
 | [`tapes`](./skills/tapes) | Search and query past agent sessions from local tapes SQLite store |
