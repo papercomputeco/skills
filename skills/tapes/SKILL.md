@@ -24,7 +24,7 @@ Before searching, the tapes API server must be running. Start it in the backgrou
 curl -sf http://localhost:8081/health > /dev/null 2>&1
 
 # If not running, start it in the background pointing at the global sqlite db
-tapes serve api --sqlite ~/.tapes/tapes.db &
+tapes serve api --sqlite ~/.tapes/tapes.sqlite &
 ```
 
 Use the Bash tool with `run_in_background` for the serve command so it doesn't block the conversation.
@@ -43,6 +43,6 @@ tapes search "<query>" --api-target http://localhost:8081 --top 5
 ## Workflow
 
 1. Check if the API is already listening on port 8081
-2. If not, start `tapes serve api --sqlite ~/.tapes/tapes.db` in the background
+2. If not, start `tapes serve api --sqlite ~/.tapes/tapes.sqlite` in the background
 3. Run the search command the user asked for
 4. Present results concisely
