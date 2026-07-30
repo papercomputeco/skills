@@ -38,11 +38,12 @@ Sessions are attributed by `auth_subject`, a WorkOS id like `user_01ABC...`. The
 
 ```
 paperctl sessions list --limit 200 --json \
-  | jq -r '.items[] | [.auth_subject, .cwd] | @tsv' \
-  | awk -F'\t' '{split($2,p,"/"); print $1"\t"p[3]}' | sort -u
+  | jq -r '.items[] | [.auth_subject, (.cwd // "-")] | @tsv' \
+  | awk -F'\t' '$2 ~ /^\/(Users|home)\/[^\/]+(\/|$)/ { split($2,p,"/"); print $1"\t"p[3]; next }
+                { print $1"\t? "$2 }' | sort -u
 ```
 
-Output pairs each `user_...` id with a username like `bekahhw` or `jpmcb`. Pick the teammate's id, then scope any command with `--auth-subject <id>`. If the person has no recent sessions, widen the window with `--since` or page back with `--cursor`. Rows whose cwd is not a home path (`tmp`, blank) are ambiguous; ignore them if the same id also appears with a real username.
+Home-path rows pair each `user_...` id with a username like `bekahhw` or `jpmcb`. Any other cwd (`/tmp/...`, containers, missing) is printed as `? <path>` rather than mistaken for a username; ignore those rows when the same id also appears with a real username. Pick the teammate's id, then scope any command with `--auth-subject <id>`. If the person has no recent sessions, widen the window with `--since` or page back with `--cursor`.
 
 ## Finding sessions
 
