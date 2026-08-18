@@ -11,11 +11,11 @@ Look up sessions that paperd captured for the active Paper org. Every agent run 
 
 | | `tapes` skill | this skill |
 |---|---|---|
-| Store | Local SQLite at `~/.tapes/` | Org session store behind the gateway |
-| Binary | `tapes` | `paperctl` |
+| Store | The Postgres the local tapes server owns | Org session store behind the gateway |
+| Binary | `tapesctl` | `paperctl` |
 | Scope | Whatever the local recorder captured | The whole org, everyone in it |
 
-If the user mentions their org, a teammate, paperd, a gateway, or `paper start`, use this skill. If they say "check the tapes" or point at `~/.tapes`, use that one.
+If the user mentions their org, a teammate, paperd, a gateway, or `paper start`, use this skill. If they say "check the tapes" or point at a local tapes server, use that one.
 
 ## Preflight
 
