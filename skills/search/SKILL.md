@@ -60,7 +60,8 @@ The top hit is often a teammate's. Scope in **one call**:
 
 1. `paperctl whoami --json` → the logged-in `user_id`.
 2. `paperctl sessions list --auth-subject <user_id> --json --limit 200` → the
-   user's own session ids.
+   user's own session ids. `--auth-subject` takes the WorkOS id only — an
+   email silently returns zero rows.
 3. Keep only hits whose `session_id` is in that set. None left means the user
    has no such session — say so, and leave teammates' hits unopened rather
    than "double-checking" owners with `sessions get`.
@@ -111,6 +112,7 @@ producing an org activity report is the `digest` skill.
 | Mistake | Do instead |
 |---------|-----------|
 | Reporting a hit as "your session" unverified | Intersect hits with the user's `--auth-subject` list — search is org-wide |
+| Passing an email to `--auth-subject` | It silently returns zero rows — use the `user_id` from `paperctl whoami` |
 | Fanning `sessions get` across hits to find owners | One `--auth-subject` list call, then intersect; others' sessions stay unread |
 | Exact-keyword queries | Describe the situation; matching is by meaning |
 | Treating session name/title as content | Names reflect how the session opened; judge by `snippet` |
@@ -125,6 +127,8 @@ producing an org activity report is the `digest` skill.
 - `HTTP 404` from `https://<org>.papercompute.run/…/tapes/v1/…` means the org's
   tapes deployment doesn't serve that endpoint yet — report that and stop;
   `paperctl doctor` cannot fix a server-side gap.
+- Auth tokens are short-lived. `paperctl login` is an interactive device flow —
+  ask the user to run it rather than running it in the background.
 - Commands act on the active org; `--org-slug <slug>` re-scopes one invocation.
 - Only agents launched through Paper (`paperctl start …`) are recorded; a
   harness launched bare has no session to find.

@@ -43,7 +43,6 @@ npx skills add papercomputeco/skills
 |--------|-------------|
 | [`confluent-cloud-setup`](./skills/confluent-cloud-setup) | Set up Confluent Cloud clusters, topics, and API keys for any project |
 | [`dagger-check`](./skills/dagger-check) | Tell the agent how to run `dagger check` |
-| [`pull-from-paper`](./skills/pull-from-paper) | Look up paperd-captured org sessions, yours or a teammate's, via `paperctl` |
 | [`tapes`](./skills/tapes) | Search and query past agent sessions captured locally by tapes, through `tapesctl` |
 | [`recall`](./skills/recall) | Before starting work, find the closest prior sessions and turn them into a playbook for the task at hand |
 | [`search`](./skills/search) | Semantic search over recorded sessions across the whole org — all authors, all harnesses — plus time/author browsing |
