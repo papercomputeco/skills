@@ -1,6 +1,6 @@
 ---
 name: tapes
-description: Use when the user says "check the tapes", "search tapes", "tapes search", or wants to look up past agent sessions captured on this machine. Searches sessions semantically through tapesctl, drills into one, and reports what to start when the server is not up. Prefer pull-from-paper when the work was captured through Paper.
+description: Use when the user says "check the tapes", "search tapes", "tapes search", or wants to look up past agent sessions captured on this machine. Searches sessions semantically through tapesctl, drills into one, and reports what to start when the server is not up. Prefer the search skill when the work was captured through Paper.
 ---
 
 # Tapes
@@ -17,9 +17,9 @@ Look up agent sessions that tapes captured on this machine. Anything routed thro
 
 **Every command in this skill that reads data is `tapesctl`.** There is no `tapes search` — that is the single most common way to get this wrong, and it fails with `unknown command "search" for "tapes"`. A machine can easily have one binary and not the other.
 
-## This is not the pull-from-paper skill
+## This is not the search skill
 
-| | this skill | `pull-from-paper` |
+| | this skill | `search` |
 |---|---|---|
 | Store | The Postgres the local tapes server owns | Org session store behind the gateway |
 | Binary | `tapesctl` | `paperctl` |

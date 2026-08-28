@@ -1,0 +1,20 @@
+{
+  "name": "skills",
+  "interface": {
+    "displayName": "Skills"
+  },
+  "plugins": [
+    {
+      "name": "paper",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Development"
+    }
+  ]
+}

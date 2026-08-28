@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "paper-skills",
+  "description": "Skills for agents to get value from sessions recorded in Paper",
+  "owner": {
+    "name": "Paper Compute"
+  },
+  "plugins": [
+    {
+      "name": "paper",
+      "description": "Cross-agent skills powered by Paper recorded sessions",
+      "version": "0.1.0",
+      "source": "./",
+      "category": "development",
+      "author": {
+        "name": "Paper Compute"
+      }
+    }
+  ]
+}

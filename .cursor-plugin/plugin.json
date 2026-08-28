@@ -1,0 +1,19 @@
+{
+  "name": "paper",
+  "displayName": "Paper",
+  "description": "Cross-agent skills powered by Paper recorded sessions.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Paper Compute"
+  },
+  "homepage": "https://github.com/papercomputeco/skills",
+  "repository": "https://github.com/papercomputeco/skills",
+  "keywords": [
+    "paper",
+    "sessions",
+    "recall",
+    "digest",
+    "skills"
+  ],
+  "skills": "./skills/"
+}

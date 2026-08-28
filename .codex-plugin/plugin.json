@@ -1,0 +1,29 @@
+{
+  "name": "paper",
+  "version": "0.1.0",
+  "description": "Cross-agent skills powered by Paper recorded sessions.",
+  "author": {
+    "name": "Paper Compute",
+    "url": "https://github.com/papercomputeco"
+  },
+  "homepage": "https://github.com/papercomputeco/skills",
+  "repository": "https://github.com/papercomputeco/skills",
+  "keywords": [
+    "paper",
+    "sessions",
+    "recall",
+    "digest",
+    "skills"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Paper",
+    "shortDescription": "Recall, search, and digest recorded agent sessions with Paper",
+    "developerName": "Paper Compute",
+    "category": "Development",
+    "capabilities": [
+      "Interactive"
+    ],
+    "websiteURL": "https://github.com/papercomputeco/skills"
+  }
+}

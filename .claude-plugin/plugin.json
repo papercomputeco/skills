@@ -1,0 +1,18 @@
+{
+  "name": "paper",
+  "version": "0.1.0",
+  "description": "Cross-agent skills for Paper: recall prior sessions, search your org's recorded work, digest activity, generate skills from sessions, and link the live session in the console",
+  "author": {
+    "name": "Paper Compute"
+  },
+  "homepage": "https://github.com/papercomputeco/skills",
+  "repository": "https://github.com/papercomputeco/skills",
+  "keywords": [
+    "paper",
+    "papercompute",
+    "sessions",
+    "recall",
+    "skills",
+    "agent-workflows"
+  ]
+}
